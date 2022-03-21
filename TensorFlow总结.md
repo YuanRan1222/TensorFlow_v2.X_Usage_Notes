@@ -1542,7 +1542,7 @@ model网络类定义的源代码
 model.load_weights("模型路径/模型名字.ckpt")
 ```
 
-#### H5方式：model.save 和 model.load_model
+#### H5方式：model.save 和 tf.keras.models.load_model
 既保留张量参数的值，也保留网络结构，因此无需网络的源文件也能恢复模型
 
 
@@ -1553,7 +1553,7 @@ from tensorflow.keras import models
 model.save("模型路径/模型名字.h5")
 
 # 加载
-model = model.load_model("模型路径/模型名字.h5")
+model = models.load_model("模型路径/模型名字.h5")
 ```
 
 #### PB方式：tf.saved_model.save 和 tf.saved_model.load
